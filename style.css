@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --background: #4312e2;
+    --primary: white;
+
+    --font: 'Poppins', sans-serif;;
+}
+input::-webkit-inner-spin-button {
+    display: none;  
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    font-family: var(--font);
+}
+.Container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    border-radius: 10px;   
+    font-size: 1rem;
+}
+.Container__TextHolder {
+    margin: 20px;
+}
+.Container__TextHolder h1{
+    font-size: 1.25em;
+}
+.Country__Selector{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.Bold {
+    font-weight: 600;
+}
+#Amount,
+#from-currency-select, 
+#to-currency-select,
+#Switch, 
+#Convert
+{
+    font-family: var(--font);
+    width: 100%;
+}
+#Result {
+    text-align: center;
+    background-color: #5023e0;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    display: none;
+    animation: appear 1s;
+}
+.visible {
+    display: block !important;
+}
+
+
+@keyframes appear {
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
